@@ -4,4 +4,4 @@ Repository to save my own PKGBUILD for the packages that doesn't have any, modif
 
 ** List of packages
 
-- emacs-bit
+- [[./emacs-git/PKGBUILD][emacs-git]]
