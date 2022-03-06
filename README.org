@@ -1,0 +1,5 @@
+* UAAM-PKGBUILD
+
+Repository to save my own PKGBUILD for the packages that doesn't have any, modified versions of those in AUR.
+
+** List of packages
