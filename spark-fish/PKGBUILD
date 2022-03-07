@@ -13,11 +13,6 @@ conflicts=('spark-bash')
 source=("$pkgname::$url/archive/refs/tags/$pkgver.tar.gz")
 md5sums=('0e68c93798fb4ca871692b37e80be41f')
 
-check() {
-	cd "$_pkgname-$pkgver"
-	fish -c 'fishtape "test/spark.fish"'
-}
-
 package() {
 	cd "$_pkgname-$pkgver"
 	install -Dm644 -t "$pkgdir/usr/share/fish/vendor_completions.d/" 'completions/spark.fish'
