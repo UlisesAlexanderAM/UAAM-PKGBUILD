@@ -1,0 +1,24 @@
+# Maintainer: Ulises Alexander Arguelles Monjaraz <ulises _ alexander _ am at protonmail dot com>
+pkgname=colored-man-pages-fish-git
+_reponame=colored_man_pages.fish
+pkgver=r24.8c4965b
+pkgrel=1
+pkgdesc="Fish shell plugin to colorize man pages"
+url="https://github.com/PatrickF1/$_reponame"
+arch=('any')
+license=('MIT')
+makedepends=('git')
+source=("$pkgname::git+$url")
+md5sums=('SKIP')
+
+pkgver() {
+  cd "$pkgname"
+  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+package() {
+    cd "$pkgname"
+    find functions -type f -exec install -Dm644 -t "$pkgdir/usr/share/fish/vendor_functions.d/" '{}' \+
+    install -Dm644 -t "$pkgdir/usr/share/licences/$pkgname/" LICENSE
+    install -Dm644 -t "$pkgdir/usr/share/doc/$pkgname/" README.md
+}

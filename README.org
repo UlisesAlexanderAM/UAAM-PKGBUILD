@@ -6,3 +6,4 @@ Repository to save my own PKGBUILD for the packages that doesn't have any, modif
 
 - [[./emacs-git/PKGBUILD][emacs-git]]
 - [[./spark-fish/PKGBUILD][spark-fish]]
+- [[./colored-man-pages-fish-git/PKGBUILD][colored_man_pages.fish]]
