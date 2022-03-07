@@ -1,0 +1,28 @@
+# Maintainer: Ulises Alexander Arguelles Monjaraz <ulises _ alexander _ am at protonmail dot com>
+pkgname=spark-fish
+_pkgname=spark.fish
+pkgver=1.2.0
+pkgrel=1
+pkgdesc=" ▁▂▄▆▇█▇▆▄▂▁ Unofficial port of spark.sh with --min, --max flags and improved performance."
+arch=('any')
+url="https://github.com/jorgebucaran/$_pkgname"
+license=('MIT')
+groups=('fish-plugins')
+checkdepends=('fish-fishtape')
+conflicts=('spark-bash')
+source=("$pkgname::$url/archive/refs/tags/$pkgver.tar.gz")
+md5sums=('0e68c93798fb4ca871692b37e80be41f')
+
+check() {
+	cd "$_pkgname-$pkgver"
+	fish -c 'fishtape "test/spark.fish"'
+}
+
+package() {
+	cd "$_pkgname-$pkgver"
+	install -Dm644 -t "$pkgdir/usr/share/fish/vendor_completions.d/" 'completions/spark.fish'
+	find functions -type f -exec install -Dm 644 -t "$pkgdir/usr/share/fish/vendor_functions.d/" '{}' \+
+	install -Dm644 -t "$pkgdir/usr/share/licenses/$pkgname/" LICENSE.md
+	install -Dm644 -t "$pkgdir/usr/share/doc/$pkgname/" README.md
+}
+
