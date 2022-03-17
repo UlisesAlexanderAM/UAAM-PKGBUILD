@@ -1,0 +1,14 @@
+pkgbase = spark-fish
+	pkgdesc = ▁▂▄▆▇█▇▆▄▂▁ Unofficial port of spark.sh with --min, --max flags and improved performance.
+	pkgver = 1.2.0
+	pkgrel = 1
+	url = https://github.com/jorgebucaran/spark.fish
+	arch = any
+	groups = fish-plugins
+	license = MIT
+	checkdepends = fish-fishtape
+	conflicts = spark-bash
+	source = spark-fish::https://github.com/jorgebucaran/spark.fish/archive/refs/tags/1.2.0.tar.gz
+	md5sums = 0e68c93798fb4ca871692b37e80be41f
+
+pkgname = spark-fish

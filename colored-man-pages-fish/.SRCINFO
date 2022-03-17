@@ -1,0 +1,12 @@
+pkgbase = colored-man-pages-fish-git
+	pkgdesc = Fish shell plugin to colorize man pages
+	pkgver = r24.8c4965b
+	pkgrel = 1
+	url = https://github.com/PatrickF1/colored_man_pages.fish
+	arch = any
+	license = MIT
+	makedepends = git
+	source = colored-man-pages-fish-git::git+https://github.com/PatrickF1/colored_man_pages.fish
+	md5sums = SKIP
+
+pkgname = colored-man-pages-fish-git
